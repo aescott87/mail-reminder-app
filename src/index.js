@@ -18,10 +18,32 @@ const middlewareList = process.env.NODE_ENV === 'development' ?
   [sagaMiddleware, logger] :
   [sagaMiddleware];
 
+const createInitState = () => {
+  const isDev = process.env.NODE_ENV === 'development';
+  if (!isDev) return {}
+
+  return {
+    app: {
+      isDev,
+      board: {
+        bulletins: [
+          {
+            "isPosted": false,
+            "smsPhone": "",
+            "remindOnDate": "",
+            "message": "" 
+          }
+        ]
+      }
+    }
+  }
+}
+
 const store = createStore(
   // tells the saga middleware to use the rootReducer
   // rootSaga contains all of our other reducers
   rootReducer,
+  createInitState(),
   // adds all middleware to our project including saga and logger
   applyMiddleware(...middlewareList),
 );
