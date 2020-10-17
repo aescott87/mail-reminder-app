@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './Components/App';
-import * as serviceWorker from './serviceWorker';
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-import rootReducer from './redux/reducers'; // imports ./redux/reducers/index.js
+import rootReducer from './Redux/Reducers'; // imports ./redux/reducers/index.js
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -29,17 +28,12 @@ const store = createStore(
 
 // tells the saga middleware to use the rootSaga
 // rootSaga contains all of our other sagas
-sagaMiddleware.run(rootSaga);
+// sagaMiddleware.run(rootSaga);
 
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('react-root')
+  document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
