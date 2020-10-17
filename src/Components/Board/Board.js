@@ -1,10 +1,10 @@
 import React from 'react';
-import './Board.css';
+import Bulletin from '../Bulletin/Bulletin';
 
 function Board() {
     return(
         <div className="mail-board">
-            <img src="Images/board.svg" alt="Board" />
+            <Bulletin />
         </div>
     )
 }
