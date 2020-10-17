@@ -23,10 +23,12 @@ function DevTool ({ devToolActions }) {
 
 function App({ isDev, devToolActions }) {
   return (
-    <div className="App">
+    <>
       { isDev ? <DevTool devToolActions={devToolActions} /> : null }
-      <Board />
-    </div>
+      <div className="App">
+        <Board />
+      </div>
+    </>
   );
 }
 
