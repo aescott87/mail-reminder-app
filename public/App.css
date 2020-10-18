@@ -31,4 +31,42 @@ body {
   font-size: 30px;
 }
 
+.bulletin-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  position: relative;
+}
+
+form {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 5px;
+}
+
+input {
+  margin: 5px 0px;
+  box-shadow: -2px 2px;
+  height: 30px;
+  width: 200px;
+}
+
+select {
+  box-shadow: -2px 2px;
+  height: 35px;
+  width: 208px;
+  margin-top: 4px;
+}
+
+label {
+  font-family: 'VT323', monospace;
+  font-size: 25px;
+  margin: 12px 2px;
+}
+
+img {
+  position: absolute;
+  top: -160px;
+}
+
 

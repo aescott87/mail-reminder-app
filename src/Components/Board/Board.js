@@ -4,7 +4,7 @@ import Bulletin from '../Bulletin/Bulletin';
 function Board() {
     return(
         <div className="mail-board">
-            <Bulletin />
+            <Bulletin index="0"/>
         </div>
     )
 }
