@@ -9,14 +9,16 @@ class Bulletin extends Component {
                     <div className="bulletin-form">
                         <img src="Images/mail-bubble.svg" alt="Mail bubble" />
                         <form>
-                            <label>Remind</label>
+                            <label className="label-item">Remind</label>
                             <input value={this.props.bulletin.smsPhone} />
-                            <label>In</label>
+                            <label className="label-item">In</label>
                             <select>
                                 <option>{this.props.bulletin.remindOnDate}</option>
                             </select>
-                            <label>To Do</label>
+                            <label className="label-item">To Do</label>
                             <input value={this.props.bulletin.message} />
+                            <button className="save-button"></button>
+                            <button className="cancel-button"></button>
                         </form>
                     </div> :
                     <p className="bulletin-message">All caught up! Nice work!</p>}

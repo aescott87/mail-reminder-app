@@ -42,26 +42,28 @@ form {
   display: grid;
   grid-template-columns: max-content max-content;
   grid-gap: 5px;
+  justify-items: center;
 }
 
 input {
   margin: 5px 0px;
   box-shadow: -2px 2px;
   height: 30px;
-  width: 200px;
+  width: 180px;
 }
 
 select {
   box-shadow: -2px 2px;
   height: 35px;
-  width: 208px;
+  width: 190px;
   margin-top: 4px;
 }
 
-label {
+.label-item {
   font-family: 'VT323', monospace;
-  font-size: 25px;
+  font-size: 30px;
   margin: 12px 2px;
+  justify-self: end;
 }
 
 img {
@@ -70,3 +72,17 @@ img {
 }
 
 
+.save-button {
+  background-image: url("Images/button-disabled.svg");
+  background-size: cover;
+  height: 50px;
+  width: 175px;
+}
+
+.cancel-button {
+  background-image: url("Images/button-disabled.svg");
+  background-size: cover;
+  height: 50px;
+  width: 175px;
+  justify-self: end;
+}
