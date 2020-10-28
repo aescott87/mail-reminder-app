@@ -72,17 +72,40 @@ img {
 }
 
 
-.save-button {
+.disabled-save-button {
   background-image: url("Images/button-disabled.svg");
   background-size: cover;
   height: 50px;
   width: 175px;
+  font-family: 'VT323', monospace;
+  font-size: 30px;
 }
 
-.cancel-button {
+.disabled-cancel-button {
   background-image: url("Images/button-disabled.svg");
   background-size: cover;
   height: 50px;
   width: 175px;
   justify-self: end;
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+}
+
+.save-button {
+  background-image: url("Images/button.svg");
+  background-size: cover;
+  height: 50px;
+  width: 175px;
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+}
+
+.cancel-button {
+  background-image: url("Images/button.svg");
+  background-size: cover;
+  height: 50px;
+  width: 175px;
+  justify-self: end;
+  font-family: 'VT323', monospace;
+  font-size: 30px;
 }
